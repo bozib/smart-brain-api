@@ -18,7 +18,7 @@ const image = require ('./controllers/image');
   }
 });
 
-const PORT = process.env.PORT || 3000 ;
+var PORT = process.env.PORT || 3000 ;
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
