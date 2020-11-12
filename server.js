@@ -10,7 +10,10 @@ const image = require ('./controllers/image');
 
   const db = knex({
     client: 'pg',
-    connectionString: process.env.DATABASE_URL || 'postgres://aapodzlnroypup:6594c0a5747cd38fb31a369ed94b3db50277a7424287d4438cc0f9a73091974b@ec2-54-158-190-214.compute-1.amazonaws.com:5432/d1a5jcti2qsdmp?ssl=true',
+    connection: {
+      host: process.env.DATABASE_URL,
+       ssl: true,
+    }
       });
 
 var PORT = process.env.PORT || 3000 ;
